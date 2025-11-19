@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: #020617;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(34,197,94,0.1);
+  color: #bbf7d0;
+  border: 1px solid rgba(34,197,94,0.4);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56,189,248,0.4);
+}
+
+.textarea {
+  min-height: 2.75rem;
+  resize: vertical;
+}
+
+.button {
+  border-radius: 999px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.button-primary {
+  background: linear-gradient(to right, #38bdf8, #6366f1);
+  color: white;
+  box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+}
+
+.button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(59,130,246,0.6);
+}
+
+.button-ghost {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: #e5e7eb;
+}
+
+.button-ghost:hover {
+  background: rgba(15,23,42,0.95);
+}
+
+.button-icon {
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.button-icon:hover {
+  border-color: rgba(148,163,184,0.6);
+  background: rgba(15,23,42,0.9);
+}
+
+.badge-pill {
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(148,163,184,0.6);
+  color: #9ca3af;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(30, 64, 175, 0.7);
+}
+
+.todo-item.done {
+  opacity: 0.65;
+  border-style: dashed;
+}
+
+.todo-main {
+  flex: 1;
+}
+
+.todo-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.todo-title.done {
+  text-decoration: line-through;
+}
+
+.todo-description {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.todo-meta {
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.checkbox {
+  margin-top: 0.25rem;
+}
+
+.chip-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #fecaca;
+  margin-bottom: 0.25rem;
+}
+
+.empty-state {
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background: rgba(15,23,42,0.85);
+  border: 1px dashed rgba(55,65,81,0.9);
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+
+.edit-input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56,189,248,0.4);
+}
