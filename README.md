@@ -32,3 +32,21 @@ It allows users to **create, view, edit, delete, and toggle todos**. The project
 
 ## 📂 Project Structure
 
+todo-fullstack-assignment/
+│── backend/
+│── frontend/
+│── README.md
+│── .gitignore
+
+``bash
+cd backend
+# Inside .env → set local MongoDB URI:
+# MONGODB_URI=mongodb://127.0.0.1:27017/todo_db
+npm install
+npm run dev
+
+cd frontend
+npm install
+npm run dev
+
+
